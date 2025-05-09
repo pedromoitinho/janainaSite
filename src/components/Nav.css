@@ -1,0 +1,176 @@
+
+*{
+    margin:0;
+    padding:0;
+}
+.navBarDiv {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 9999; /* Increased z-index */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+    height: 60px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navLogo img {
+    height: 50px;
+    margin-top:10px;
+    margin-right:auto;
+}
+
+.navLinks {
+    display: flex;
+    gap: 1rem;
+    margin-right:3rem;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    transition: background 0.3s;
+}
+
+.navLinks a:hover {
+    background: #f0f0f0;
+}
+#orcamento{
+    background-color:#ffcc00;
+    &:hover{
+        background-color:#ffd942;
+
+    }
+}
+#logoButton{
+    cursor:pointer;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: auto;
+    margin-right:20px;
+}
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.app-content {
+    padding-top: 60px;
+}
+
+@media (max-width: 600px) {
+    .navBarDiv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+        padding: 0.5rem;
+    }
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: -2.5%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 1rem 0;
+        justify-content: center;
+        z-index: 10;
+        text-align: center;
+    }
+    .navLinks.open {
+        display: flex;
+    }
+    .navLinks a {
+        text-align:center;
+    }
+    .hamburger {
+        display: flex;
+    }
+    #orcamento{ 
+        width:90px;
+        margin-left: calc(50% - 60px);
+    }
+    .navLogo img{
+        position:absolute;
+        top:6%;
+        left:-3%;
+    }
+
+}
+@media (max-height:450px){
+    .navBarDiv {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        z-index: 100;
+        flex-direction: row;
+        align-items: center;
+        height: 60px;
+        padding: 0.5rem;
+    }
+    .navLinks {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        background: #fff;
+        position: absolute;
+        top: 60px;
+        left: -2.5%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        padding: 1rem 0;
+        justify-content: center;
+        z-index: 10;
+        text-align: center;
+    }
+    .navLinks.open {
+        display: flex;
+    }
+    .navLinks a {
+        text-align:center;
+    }
+    .hamburger {
+        display: flex;
+    }
+    #orcamento{ 
+        width:90px;
+        margin-left: calc(50% - 60px);
+    }
+    .navLogo img{
+        position:absolute;
+        top:6%;
+        left:-3%;
+    }
+
+}

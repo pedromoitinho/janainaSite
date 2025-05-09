@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+*{
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  font-family: "Nunito Sans", sans-serif;
+  font-weight:600;
+}
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body, #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1 0 auto;
+  padding-bottom: 8dvh; /* Add space for footer */
+}
+.heroDiv {
+  position: relative; /* Add this */
+  box-shadow:
+    0 -4px 10px -10px rgba(0,0,0,0.2),  /* Top shadow */
+    0 4px 10px 2px rgba(0,0,0,0.2);
+  margin-top:0px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80dvh; 
+  overflow: hidden;
+  background: linear-gradient(to bottom, #bd871f 0%, rgb(177, 123, 24) 100%);
+}
+
+.heroText {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #FFECD0;
+  text-align: center;
+  z-index: 2;
+  width: 100vw;
+  height: 15dvh;
+  background-color: rgba(0,0,0,0.3);
+  font-size:1.8rem;
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+}
+
+.heroButton {
+  position:absolute;
+  top:79%;
+}
+
+#buttonOrcamento {
+  background: #ffcc00;
+  cursor:pointer;
+  color: #FFECD0;;
+  padding: 0.7em 3em;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.4rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: ease 0.3s;
+}
+
+#buttonOrcamento:hover {
+  filter:brightness(1.08);
+  font-size:1.5em;
+}
+
+#heroImage {
+  margin-top:10dvh;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: contrast(1.1);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Zoom-in animation */
+@keyframes zoomInUp {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.servicosText {
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+  opacity: 0;
+  transition: opacity 0.5s;
+  will-change: opacity, transform;
+}
+
+.servicosText.visible {
+  opacity: 1;
+  animation: zoomInUp 2.0s cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.servicosText h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.servicosCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.servicoCard {
+  width: 241px;
+  height: 343px;
+  background: #fff;
+  border-radius: 30px; /* Use same radius for card, image, and overlay */
+  display: flex;
+  border:2px solid #DBA02E;
+  align-items: center;
+  justify-content: center;
+  box-shadow:4px 6px 20px 2px rgba(0, 0, 0, 0.342);
+  position: relative;
+  padding: 0;
+  overflow: hidden; /* Ensures image and overlay are clipped */
+  transition: ease 0.3s;
+  &:hover{
+    transform:scale(1.05);
+  }
+}
+
+.servicoCardImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30px; /* Match card */
+  z-index: 1;
+  pointer-events: none;
+  filter:brightness(1.15);
+}
+#imgAssessoria{
+  width:130%;
+  left:-7%;
+}
+#imgPsicologia{
+  width:120%;
+  left:-13%;
+}
+#imgSaúde{
+  width:120%;
+  left:-7%;
+}
+#imgSegurança{
+  width:120%;
+  left:-8%;
+}
+#imgTreinamentos{
+  width:120%;
+  left:-7%;
+}
+
+.servicoCardContent {
+  position: absolute;
+  top: 0;
+  left: -7.5%;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  background: rgba(0,0,0,0.05);
+  border-radius: 18px; /* Match card */
+}
+#servicoAmarelo{
+  color:#976912;
+}
+
+.servicoCardContent h2,
+.servicoCardContent p {
+  color: #fff;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+.servicoCardContent h2 {
+  margin: 0.5rem 0 0.2rem 0;
+  font-size: 1.2rem;
+}
+
+.servicoCardTitleBg {
+  background: rgba(0,0,0,0.5);
+  padding: 0.3em 10em;
+  border-radius: 12px;
+  color: #fff;
+  display: inline-block;
+  font-size: 1.1em;
+  text-shadow: none;
+}
+
+.servicoCardBtn {
+  margin-top: 10%;
+  background: #ffcc00;
+  color: #fff6e4;
+  border: none;
+  border-radius: 30px;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  text-shadow: none;
+  transition: ease 0.3s;
+  &:hover{
+    font-size:1.1rem;
+  }
+}
+
+.servicoCardBtn:hover {
+  background: #ffd942;
+}
+
+@media (max-width: 600px){
+  .servicosTitle{
+    font-size:1.5rem;
+  }
+  .heroDiv{
+    height:50dvh;
+  }
+  .heroText{
+    font-size:0.8rem;
+    height:12dvh;
+  }
+  .heroButton{
+    top:82%;
+  }
+  #buttonOrcamento{
+    font-size:1rem;
+  }
+  .servicosText {
+    margin-top: 4rem;
+  }
+  .servicosCards {
+    gap: 1.2rem;
+    margin-top:1rem;
+  }
+  .servicoCard {
+    width: 90vw;
+    max-width: 241px;
+    height: 260px;
+  }
+}
+@media (max-height:450px){
+  .heroDiv{
+    height:70dvh;
+  }
+  .heroText{
+    font-size:0.8rem;
+    height:12dvh;
+  }
+  .heroButton{
+    top:82%;
+  }
+  #buttonOrcamento{
+    font-size:0.8rem;
+  }
+}
