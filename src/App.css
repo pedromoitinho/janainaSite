@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 *{
-  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 1.5px 1.5px 2px rgba(0, 0, 0, 0.2);
   font-family: "Nunito Sans", sans-serif;
   font-weight:600;
 }
@@ -44,9 +44,9 @@ body, #root {
   text-align: center;
   z-index: 2;
   width: 100vw;
-  height: 15dvh;
+  height: 10dvh;
   background-color: rgba(0,0,0,0.3);
-  font-size:1.8rem;
+  font-size:1.35rem;
   display: flex;
   justify-content: center;   /* horizontal center */
   align-items: center;       /* vertical center */
@@ -54,7 +54,7 @@ body, #root {
 
 .heroButton {
   position:absolute;
-  top:79%;
+  top:77%;
 }
 
 #buttonOrcamento {
@@ -65,7 +65,7 @@ body, #root {
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: ease 0.3s;
 }
@@ -110,20 +110,35 @@ body, #root {
   }
 }
 
+/* Create a better animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(40px);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.01) translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
 .servicosText {
-  width: 100dvw;
+  width: 50dvw;
+  margin-left:25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 5rem;
   opacity: 0;
-  transition: opacity 0.5s;
   will-change: opacity, transform;
 }
 
 .servicosText.visible {
-  opacity: 1;
-  animation: zoomInUp 2.0s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: fadeInScale 3.0s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
 .servicosText h1 {
@@ -134,7 +149,7 @@ body, #root {
 .servicosCards {
   display: flex;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 3.5rem;
   justify-content: center;
   margin-top: 3rem;
 }
@@ -148,10 +163,11 @@ body, #root {
   border:2px solid #DBA02E;
   align-items: center;
   justify-content: center;
-  box-shadow:4px 6px 20px 2px rgba(0, 0, 0, 0.342);
+  box-shadow:4px 6px 20px 2px rgba(0, 0, 0, 0.199);
   position: relative;
   padding: 0;
   overflow: hidden; /* Ensures image and overlay are clipped */
+  text-align:center;
   transition: ease 0.3s;
   &:hover{
     transform:scale(1.05);
@@ -164,7 +180,7 @@ body, #root {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit:cover;
   border-radius: 30px; /* Match card */
   z-index: 1;
   pointer-events: none;
@@ -222,12 +238,12 @@ body, #root {
 }
 
 .servicoCardTitleBg {
-  background: rgba(0,0,0,0.5);
+  background: rgba(31, 31, 31, 0.4);
   padding: 0.3em 10em;
   border-radius: 12px;
   color: #fff;
   display: inline-block;
-  font-size: 1.1em;
+  font-size: 1.05em;
   text-shadow: none;
 }
 
@@ -253,8 +269,88 @@ body, #root {
 .servicoCardBtn:hover {
   background: #ffd942;
 }
+.solucoesDiv{
+  width:70dvw;
+  margin-top:5rem;
+  margin-left:15%;
+  display:flex;
+  flex-direction: column; /* Add this line */
+  align-items: center; /* Add this line */
+  user-select: none;
+  opacity: 0;
+  will-change: opacity, transform;
+}
 
-@media (max-width: 600px){
+.solucoesDiv.visible {
+  animation: fadeInScale 3.0s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+#solucoesAmarelo{
+  color: #976912;
+}
+
+.solucoesCards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 100%;
+  padding: 0 2rem;
+}
+
+.solucaoCard {
+  width: 500px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  display: flex;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  border-left: 4px solid #DBA02E;
+}
+
+.solucaoCard:hover {
+  transform: translateY(-10px);
+}
+
+.solucaoLogo {
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-right: 1.5rem;
+}
+
+.solucaoLogo img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+.solucaoContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.solucaoContent h3 {
+  margin: 0 0 0.8rem 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.solucaoContent p {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
   .servicosTitle{
     font-size:1.5rem;
   }
@@ -262,14 +358,14 @@ body, #root {
     height:50dvh;
   }
   .heroText{
-    font-size:0.8rem;
-    height:12dvh;
+    font-size:0.75rem;
+    height:7dvh;
   }
   .heroButton{
-    top:82%;
+    top:78%;
   }
   #buttonOrcamento{
-    font-size:1rem;
+    font-size:0.85rem;
   }
   .servicosText {
     margin-top: 4rem;
@@ -283,14 +379,60 @@ body, #root {
     max-width: 241px;
     height: 260px;
   }
+  .solucoesCards {
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+  
+  .solucaoCard {
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .solucaoLogo {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    margin-right: 1rem;
+  }
+  
+  .solucaoContent h3 {
+    font-size: 1.1rem;
+  }
+  
+  .solucaoContent p {
+    font-size: 0.9rem;
+  }
 }
 @media (max-height:450px){
+    .servicoCardTitleBg{
+      font-size:0.95em;
+    }
+    .servicosTitle{
+    font-size:1.6rem;
+  }
+  .servicoCardBtn{
+    font-size:0.9rem;
+    margin-top:7.5%;
+  }
+  .servicoCard{
+    width:30dvw;
+    height:60dvh;
+  }
+  .servicosCards{
+    margin-top:2%;
+  }
+  .servicosText{
+    width:70dvw;
+    margin-top:5%;
+    margin-left:15%;
+  }
   .heroDiv{
     height:70dvh;
   }
   .heroText{
-    font-size:0.8rem;
-    height:12dvh;
+    font-size:0.9rem;
+    height:15dvh;
   }
   .heroButton{
     top:82%;

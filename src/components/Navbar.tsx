@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './Nav.css'
 import Logo from '../assets/logoJanaina.png'
 
@@ -8,7 +9,7 @@ function Navbar() {
     return (
         <nav className="navBarDiv">
             <div className="navLogo">
-                <a id='logoButton'><img src={Logo} /></a>
+                <Link to="/" id='logoButton'><img src={Logo} /></Link>
             </div>
             <button
                 className="hamburger"
@@ -20,9 +21,9 @@ function Navbar() {
                 <span />
             </button>
             <div className={`navLinks${menuOpen ? ' open' : ''}`}>
-                <a href="#servicos">Serviços</a>
-                <a href="#sobre">Sobre Nós</a>
-                <a href="#orcamento" id='orcamento'>Orçamento</a>
+                <Link to="/#servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
+                <Link to="/#sobre" onClick={() => setMenuOpen(false)}>Sobre Nós</Link>
+                <Link to="/orcamento" id='orcamento' onClick={() => setMenuOpen(false)}>Orçamento</Link>
             </div>
         </nav>
     )
