@@ -2,8 +2,8 @@
     height: 3dvh; /* Change from 90dvh to a reasonable footer height */
     min-height: 70px; /* Add minimum height to ensure content fits */
     width: 96.6dvw; /* Use 100% instead of auto to ensure full width */
-    background-color: #DBA02E;
-    box-shadow: 0 -2px 12px rgba(0,0,0,0.10);
+    background-color:#dba02e;
+    box-shadow: 0 -10px 12px rgba(0,0,0,0.10);
     display: flex;
     align-items: center;
     justify-content: space-between;

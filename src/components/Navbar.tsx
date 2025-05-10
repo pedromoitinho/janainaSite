@@ -22,7 +22,7 @@ function Navbar() {
             </button>
             <div className={`navLinks${menuOpen ? ' open' : ''}`}>
                 <Link to="/#servicos" onClick={() => setMenuOpen(false)}>Serviços</Link>
-                <Link to="/#sobre" onClick={() => setMenuOpen(false)}>Sobre Nós</Link>
+                <Link to="/about" onClick={() => setMenuOpen(false)}>Sobre Nós</Link>
                 <Link to="/orcamento" id='orcamento' onClick={() => setMenuOpen(false)}>Orçamento</Link>
             </div>
         </nav>

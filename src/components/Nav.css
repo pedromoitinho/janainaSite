@@ -15,7 +15,7 @@
     padding: 0 1rem;
     height: 60px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: -10px 5px 20px -5px rgba(0, 0, 0, 0.5);
 }
 
 .navLogo img {
@@ -40,7 +40,7 @@
 }
 
 .navLinks a:hover {
-    background: #f0f0f0;
+    background: #f0f0f0f8;
 }
 #orcamento{
     background-color:#ffcc00;
