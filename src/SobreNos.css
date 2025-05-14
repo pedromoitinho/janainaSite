@@ -8,7 +8,7 @@
   --card-bg: #ffffff;
   --border-radius: 12px;
   --transition: all 0.3s ease;
-  --shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
+  --shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.11);
   --shadow-hover: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
   
   font-family: "Nunito Sans", sans-serif;
