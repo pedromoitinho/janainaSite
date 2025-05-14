@@ -1,0 +1,375 @@
+.services {
+  padding: 4rem 0;   
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;           /* Add this */
+  flex-direction: column;  /* Add this */
+  align-items: center;     /* Add this to center children horizontally */
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.highlight {
+  color: #f59e0b;
+}
+
+.subtitle {
+  font-size: 1.05rem;
+  color: #717886;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: calc(100% - 2rem);
+  max-width: 350px;
+  background-color: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  position: relative; /* Add this */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+/* Specific positioning for each service image */
+#imgAssessoriaTecnica {
+  position: absolute; /* Position absolutely within container */
+  width: 110%;
+  height: 150%;
+  object-fit: cover;
+  left: -5%; /* Position from left edge */
+  top: -10%;
+}
+
+#imgSegurancaDoTrabalho {
+  position: absolute;
+  width: 145%;
+  height: 100%;
+  object-fit: cover;
+  left: -23.5%;
+  top: 0;
+}
+
+#imgGestaoOcupacional {
+  position: absolute;
+  width: 135%;
+  height: 100%;
+  object-fit: cover;
+  left: -35%;
+  top: -5%;
+}
+
+#imgTreinamentosCorporativos {
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  object-fit: cover;
+  left: -22.5%;
+  top: 0;
+}
+
+#imgProgramasDeSeguranca {
+  position: absolute;
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  left: -10%;
+  top: 0;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.description {
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+/* Make "Saiba Mais" a button for better semantics */
+.link {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #f59e0b;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: #d97706;
+}
+
+.icon {
+  margin-left: 0.25rem;
+}
+
+/* Modal styles */
+.modal-overlay {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.2s ease-out;
+  touch-action: none; /* Prevent touch events */
+  overscroll-behavior: contain; /* Prevent pull-to-refresh */
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 650px;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.3s ease-out;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #666;
+  cursor: pointer;
+  z-index: 10;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.modal-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.modal-title {
+  margin: 0;
+  padding: 20px 25px;
+  color: #1f2937;
+  font-weight: 700;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+
+
+.modal-body {
+  padding: 25px;
+}
+
+.modal-description {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.modal-benefits {
+  margin-bottom: 30px;
+}
+
+.modal-benefits h3 {
+  color: #1f2937;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.modal-benefits ul {
+  padding-left: 20px;
+}
+
+.modal-benefits li {
+  margin-bottom: 8px;
+  color: #4b5563;
+}
+
+.modal-cta {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.modal-button {
+  display: inline-block;
+  background-color: #f59e0b;
+  color: white;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 50px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: background-color 0.2s;
+}
+
+.modal-button:hover {
+  background-color: #d97706;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to { 
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 600px){
+  .modal-cta{
+      height:150px;
+    }
+  .modal-content{
+    margin-top:12.5%;
+  }
+    .title{
+        font-size:1.8rem;
+    }
+    .subtitle{
+        font-size:0.8rem;
+    }
+    .services{
+        padding: 3.5rem 0;
+    }
+    .grid{
+        max-width:1000px;
+    }
+    .card{
+        max-width:300px;
+    }
+    .header{
+        margin-bottom:2.6rem;
+    }
+    .card-title{
+        font-size:1.1rem;
+    }
+    .description{
+        font-size:0.9rem;
+    }
+}
+@media (max-width: 400px) {
+  .modal-content{
+    margin-top:22.5%;
+  }
+}
+@media (max-height:500px){
+    .modal-cta{
+      height:150px;
+    }
+       .modal-content{
+    margin-top:10%;
+  }
+    .title{
+        font-size:1.8rem;
+    }
+    .subtitle{
+        font-size:0.8rem;
+    }
+    .services{
+        padding: 3.5rem 0;
+    }
+    .grid{
+        max-width:1000px;
+    }
+    .card{
+        max-width:300px;
+    }
+    .header{
+        margin-bottom:2.6rem;
+    }
+    .card-title{
+        font-size:1.1rem;
+    }
+    .description{
+        font-size:0.9rem;
+    }
+}
