@@ -6,7 +6,7 @@ import { useRef, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Services from './components/Services'
 import Whatsapp from './components/Whatsapp'
-
+import LogoScroller from './components/LogoScroller'
 
 type Solution = {
   title: string;
@@ -53,6 +53,7 @@ function App() {
               }}>Começar agora</Link>
           </div>
         </div>
+        <LogoScroller />
         <Services/>
        
         <div
