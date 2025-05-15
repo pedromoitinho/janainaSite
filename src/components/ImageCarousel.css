@@ -6,6 +6,7 @@
     padding: 20px 0;
     opacity: 0;
     transform: translateY(40px);
+    margin-bottom: 3rem;
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
