@@ -124,12 +124,16 @@ const services: Service[] = [
     id: "imgTreinamentosCorporativos",
     details: "Treinamentos focados no desenvolvimento de soft skills. As capacitações são personalizadas de acordo com as demandas da empresa e direcionadas para líderes e equipes.<hr/>",
     services: [
-      '<span style="font-weight:bold; position:relative; right:15px;">Treinamentos em:</span>',
-      'Comunicação Assertiva',
+      '<span style="font-weight:bold; position:relative; right:15px;">Treinamentos com Soft Skills:</span>',
+      'Método o Poder da Conexão',
+      'Método Sinergia Estratégica',
+      '<span style="font-weight:bold; position:relative; right:15px;">Palestras Comportamentais:</span>',
+      'Feedback',
+      'Ética Profissional',
+      'Relação Intrapessoal e Interpessoal',
       'Inteligência Emocional',
-      'Trabalho em Equipe',
-      'Liderança e Tomada de Decisão',
-      'Gestão de Conflitos e Comportamento Seguro'
+      'Gestão de Conflitos',
+      'Comunicação Assertiva Não Violenta'
     ],
     benefits: [
       "Desenvolvimento de habilidades socioemocionais",
