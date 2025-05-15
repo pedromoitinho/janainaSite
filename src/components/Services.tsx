@@ -14,7 +14,8 @@ interface Service {
   link: string;
   id?: string;
   details?: string; // Add this for detailed modal content
-  benefits?: string[]; // Add this for bullet points in modal
+  services?: string[];
+  benefits?: string[];// Add this for bullet points in modal
 }
 
 // Create a function to generate IDs from titles
@@ -29,12 +30,34 @@ const services: Service[] = [
     image: segurancaImg,
     link: "#",
     id: "imgProgramasDeSeguranca",
-    details: "Soluções em segurança do trabalho, com foco na gestão de documentos, treinamentos e integração com o e-Social. Conformidade com a legislação vigente e contribuição para a prevenção de acidentes, saúde e bem-estar dos colaboradores. <br/> <hr/>Serviços: <br/> Elaboração de Documentos Legais: LTCAT, DIR, PGR, PPP",
+    details: "Soluções em segurança do trabalho, com foco na gestão de documentos e treinamentos. Conformidade com a legislação vigente e contribuição para a prevenção de acidentes<hr/>",
+    services: [
+      '<span style="font-weight:bold; position:relative; right:15px;">Documentos de SST</span>',
+      'LTCAT - Laudo Técnico das Condições Ambientais do Trabalho',
+      'PGR - Programa de Gerenciamento de Risco',
+      'PPP - Perfil Profissiográfico Previdenciário',
+      'PCMSO - Programa de Controle Médico de Saúde Ocupacional',
+      'AET - Análise Ergonômica do Trabalho',
+      '<span style="font-weight:bold; position:relative; right:15px;">Treinamentos Obrigatórios</span>',
+      'NR 05 - Prevenção de Acidentes e Assédio - CIPA',
+      'NR 06 - Uso de EPIs',
+      'NR 10 - Segurança em Instalações',
+      'NR 12 - Segurança em Maquinas e Equipamentos',
+      'NR 17 - Ergonomia',
+      'NR 18 - Segurança na Indústria da Construção',
+      'NR 33 - Espaços Confinados',
+      'NR 35 - Trabalho em Altura',
+      '<span style="font-weight:bold; position:relative; right:15px;">SST no eSocial</span>',
+      'S-2210 - Acidente de Trabalho',
+      'S-2220 - Exames Médicos',
+      'S-2240 - Riscos Ocupacionais'
+
+    ],
     benefits: [
-      "Conformidade com as normas regulamentadoras e integração com o e-Social",
+      "Conformidade com as normas regulamentadoras",
       "Treinamentos para prevenção de riscos e capacitação de equipes",
       "Organização dos documentos de segurança do trabalho",
-      "Gestão da saúde e segurança do trabalho, melhorando a qualidade de vida no trabalho"
+      "Gestão da segurança do trabalho, melhorando a qualidade de vida no trabalho"
     ]
   },
   {
@@ -43,7 +66,14 @@ const services: Service[] = [
     image: psicologiaImg,
     link: "#",
     id: "imgSegurancaDoTrabalho",
-    details: "Aplicação de avaliações psicossociais para promover o bem-estar mental dos colaboradores. Oferecemos mentoria para líderes e suporte na gestão de pessoas. <br/> <hr/>Serviços: <br/> Avaliação Psicossocial, Avaliação Psicológica, Avaliação de Competência, Pesquisa de Clima Organizacional, Aplicação de Ferramentas de Gestão Comportamental",
+    details: "Aplicação de avaliações psicossociais para promover o bem-estar mental dos colaboradores.<hr/>",
+    services: [
+      'Avaliação Psicossocial',
+      'Avaliação Psicológica',
+      'Avaliação de Competência',
+      'Pesquisa de Clima Organizacional',
+      'Aplicação de Ferramentas de Gestão Comportamental'
+    ],
     benefits: [
       "Redução de conflitos interpessoais",
       "Identificação e prevenção de riscos psicossociais",
@@ -57,9 +87,14 @@ const services: Service[] = [
     image: saudeImg,
     link: "#",
     id: "imgGestaoOcupacional",
-    details: "Programas de prevenção e acompanhamento médico, garantindo o bem-estar dos colaboradores e a conformidade com as exigências legais. <br/> <hr/>Serviços: <br/> ASO - Atestado de Saúde Ocupacional",
+    details: "Programas de prevenção e acompanhamento médico, garantindo o bem-estar dos colaboradores e a conformidade com as exigências legais.<hr/>",
+    services: [
+      'ASO',
+      'ASO',
+      'PCA',
+      'PPR'
+    ],
     benefits: [
-      "Cumprimento de exigências legais (PCMSO, ASO, PCA e PPR)",
       "Redução de afastamentos e doenças ocupacionais",
       "Acompanhamento preventivo da saúde dos colaboradores",
       "Ambiente de trabalho mais seguro e saudável"
@@ -71,7 +106,13 @@ const services: Service[] = [
     image: assesoriaImg,
     link: "#",
     id: "imgAssessoriaTecnica",
-    details: "Assessoria técnica para suporte na gestão, garantindo o correto atendimento às normas regulamentadoras e otimizando processos internos. <br/><hr/> Serviços: <br/> Gestão do E-Social: Eventos S-2210, S-2220, S-2240",
+    details: "Assessoria técnica para suporte na gestão, garantindo o correto atendimento às normas regulamentadoras e otimizando processos internos.<hr/>",
+    services: [
+      'Gestão do E-Social',
+      'S-2210',
+      'S-2220',
+      'S-2240'
+    ],
     benefits: [
       "Orientação técnica especializada",
       "Redução de não conformidades em fiscalizações",
@@ -172,8 +213,8 @@ const Services: React.FC = () => {
               <div className="content">
                 <h3 className="card-title">{service.title}</h3>
                 <p className="description">{service.description}</p>
-                <button 
-                  onClick={(e) => openModal(service, e)} 
+                <button
+                  onClick={(e) => openModal(service, e)}
                   className="link"
                 >
                   Saiba Mais
@@ -205,10 +246,10 @@ const Services: React.FC = () => {
             <button className="modal-close" onClick={closeModal}>&times;</button>
             <h2 className="modal-title">{selectedService.title}</h2>
             <div className="modal-image-container">
-              <img 
-                src={selectedService.image} 
-                alt={selectedService.title} 
-                className="modal-image" 
+              <img
+                src={selectedService.image}
+                alt={selectedService.title}
+                className="modal-image"
               />
             </div>
             <div className="modal-body">
@@ -216,18 +257,44 @@ const Services: React.FC = () => {
                 className="modal-description"
                 dangerouslySetInnerHTML={{ __html: selectedService.details || '' }}
               ></p>
-              
+              {selectedService.services && (
+                <div className="modal-benefits">
+                  <h3>Serviços:</h3>
+                  <ul>
+                    {selectedService.services.map((service, index) => {
+                      // Determine if this item should have no bullet
+                      const hasNoBulletStyle = service.includes('font-weight:bold');
+                      return (
+                        <li
+                          key={index}
+                          className={hasNoBulletStyle ? 'no-bullet' : ''}
+                          dangerouslySetInnerHTML={{ __html: service }}
+                        ></li>
+                      );
+                    })}
+                  </ul>
+                  <hr />
+                </div>
+              )}
               {selectedService.benefits && (
                 <div className="modal-benefits">
                   <h3>Benefícios:</h3>
                   <ul>
-                    {selectedService.benefits.map((benefit, index) => (
-                      <li key={index}>{benefit}</li>
-                    ))}
+                    {selectedService.benefits.map((benefit, index) => {
+                      // Determine if this item should have no bullet
+                      const hasNoBulletStyle = benefit.includes('font-weight:bold');
+                      return (
+                        <li
+                          key={index}
+                          className={hasNoBulletStyle ? 'no-bullet' : ''}
+                          dangerouslySetInnerHTML={{ __html: benefit }}
+                        ></li>
+                      );
+                    })}
                   </ul>
                 </div>
               )}
-              
+
               <div className="modal-cta">
                 <p>Entre em contato para mais informações sobre este serviço.</p>
                 <Link

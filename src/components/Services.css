@@ -1,18 +1,23 @@
 .services {
-  padding: 4rem 0;   
-  
+  padding: 4rem 0;
+
 }
-hr{
-  color:rgba(170, 170, 170, 0.185);
+
+hr {
+  color: rgba(170, 170, 170, 0.185);
+  margin-top: 20px;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-  display: flex;           /* Add this */
-  flex-direction: column;  /* Add this */
-  align-items: center;     /* Add this to center children horizontally */
+  display: flex;
+  /* Add this */
+  flex-direction: column;
+  /* Add this */
+  align-items: center;
+  /* Add this to center children horizontally */
 }
 
 .header {
@@ -66,7 +71,8 @@ hr{
 .image-container {
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  position: relative; /* Add this */
+  position: relative;
+  /* Add this */
 }
 
 .image {
@@ -82,11 +88,13 @@ hr{
 
 /* Specific positioning for each service image */
 #imgAssessoriaTecnica {
-  position: absolute; /* Position absolutely within container */
+  position: absolute;
+  /* Position absolutely within container */
   width: 110%;
   height: 150%;
   object-fit: cover;
-  left: -5%; /* Position from left edge */
+  left: -5%;
+  /* Position from left edge */
   top: -10%;
 }
 
@@ -180,8 +188,10 @@ hr{
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.2s ease-out;
-  touch-action: none; /* Prevent touch events */
-  overscroll-behavior: contain; /* Prevent pull-to-refresh */
+  touch-action: none;
+  /* Prevent touch events */
+  overscroll-behavior: contain;
+  /* Prevent pull-to-refresh */
 }
 
 .modal-content {
@@ -236,7 +246,7 @@ hr{
 .modal-image {
   width: 100%;
   height: 100%;
-  object-fit:cover;
+  object-fit: cover;
 }
 
 
@@ -269,10 +279,20 @@ hr{
   color: #4b5563;
 }
 
+/* Custom style for list items without bullets */
+.modal-benefits li.no-bullet {
+  list-style-type: none;
+}
+
 .modal-cta {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid #eee;
+}
+
+li {
+  margin-bottom: 25px;
+  margin-top: 25px;
 }
 
 .modal-button {
@@ -292,87 +312,113 @@ hr{
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { 
+  from {
     opacity: 0;
     transform: scale(0.9);
   }
-  to { 
+
+  to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-@media (max-width: 600px){
-  .modal-cta{
-      height:150px;
-    }
-  .modal-content{
-    margin-top:12.5%;
+@media (max-width: 600px) {
+  .modal-cta {
+    height: 150px;
   }
-    .title{
-        font-size:1.8rem;
-    }
-    .subtitle{
-        font-size:0.8rem;
-    }
-    .services{
-        padding: 3.5rem 0;
-    }
-    .grid{
-        max-width:1000px;
-    }
-    .card{
-        max-width:300px;
-    }
-    .header{
-        margin-bottom:2.6rem;
-    }
-    .card-title{
-        font-size:1.1rem;
-    }
-    .description{
-        font-size:0.9rem;
-    }
+
+  .modal-content {
+    margin-top: 12.5%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .services {
+    padding: 3.5rem 0;
+  }
+
+  .grid {
+    max-width: 1000px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  .header {
+    margin-bottom: 2.6rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
 }
+
 @media (max-width: 400px) {
-  .modal-content{
-    margin-top:22.5%;
+  .modal-content {
+    margin-top: 22.5%;
   }
 }
-@media (max-height:500px){
-    .modal-cta{
-      height:150px;
-    }
-       .modal-content{
-    margin-top:10%;
+
+@media (max-height:500px) {
+  .modal-cta {
+    height: 150px;
   }
-    .title{
-        font-size:1.8rem;
-    }
-    .subtitle{
-        font-size:0.8rem;
-    }
-    .services{
-        padding: 3.5rem 0;
-    }
-    .grid{
-        max-width:1000px;
-    }
-    .card{
-        max-width:300px;
-    }
-    .header{
-        margin-bottom:2.6rem;
-    }
-    .card-title{
-        font-size:1.1rem;
-    }
-    .description{
-        font-size:0.9rem;
-    }
+
+  .modal-content {
+    margin-top: 10%;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 0.8rem;
+  }
+
+  .services {
+    padding: 3.5rem 0;
+  }
+
+  .grid {
+    max-width: 1000px;
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  .header {
+    margin-bottom: 2.6rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
 }
