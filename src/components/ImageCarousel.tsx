@@ -6,6 +6,10 @@ import image1 from '../carousel-assets/carousel1.jpg';
 import image2 from '../carousel-assets/carousel2.jpg';
 import image3 from '../carousel-assets/carousel3.jpg';
 import image4 from '../carousel-assets/carousel4.jpg';
+import image5 from '../carousel-assets/carousel5.jpg';
+import image6 from '../carousel-assets/carousel6.jpg';
+import image7 from '../carousel-assets/carousel7.jpg';
+import image8 from '../carousel-assets/carousel8.jpg';
 
 interface CarouselImage {
     src: string;
@@ -41,8 +45,28 @@ const ImageCarousel: React.FC = () => {
         },
         {
             src: image4,
+            alt: 'Avaliação Ergonômica',
+            caption: 'Avaliação Ergonômica'
+        },
+        {
+            src: image5,
+            alt: 'Higiene Ocupacional',
+            caption: 'Higiene Ocupacional'
+        },
+        {
+            src: image6,
             alt: 'Assessoria Técnica',
             caption: ''
+        },
+        {
+            src: image7,
+            alt: 'NR 10 - SEP',
+            caption: 'NR 10 - SEP'
+        },
+        {
+            src: image8,
+            alt: 'Avaliação Ocupacional de Ruído e Vibração',
+            caption: 'Avaliação Ocupacional de Ruído e Vibração'
         },
     ];
 
