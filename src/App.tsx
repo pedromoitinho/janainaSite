@@ -47,10 +47,7 @@ function App() {
               <h1>Sua visão, nossa estratégia</h1>
           </div>
           <div className='heroButton'>
-              <Link to="/forms" id='buttonOrcamento' onClick={(e) => {
-                e.preventDefault();
-                window.location.href = '/forms';
-              }}>Começar agora</Link>
+              <Link to="/forms" id='buttonOrcamento'>Começar agora</Link>
           </div>
         </div>
         <LogoScroller />

@@ -137,9 +137,9 @@ export function MultiStepForm() {
   const sendEmail = async () => {
     setIsLoading(true);
     try {
-      const serviceID = import.meta.env.VITE_EMAILJS_SERVICEID;
-      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
-      const publicKey = import.meta.env.VITE_EMAILJS_PUBLICKEY;
+      const serviceID = 'EnvioJanaina';
+      const templateID = 'template_t803u9n';
+      const publicKey = 'xbPRtqWAp6ps4WSbR';
 
       const templateParams = {
         ...formData,

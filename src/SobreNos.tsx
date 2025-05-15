@@ -89,10 +89,7 @@ function SobreNos(){
                                 <h2>Nosso Compromisso</h2>
                             </div>
                             <p>Estamos comprometidos em fornecer soluções de alta qualidade que não apenas atendam, mas superem as expectativas dos nossos clientes. Nossa abordagem consultiva e personalizada garante que cada empresa receba exatamente o que precisa para prosperar em um ambiente de trabalho seguro e saudável.</p>
-                            <Link to="/forms" className="about-cta-button" onClick={(e) => {
-                                e.preventDefault(); // Prevent default Link behavior
-                                window.location.href = '/forms'; // Force refresh to the forms page
-                            }}>Solicitar Orçamento</Link>
+                            <Link to="/forms" className="about-cta-button">Solicitar Orçamento</Link>
                         </div>
                     </div>
                 </section>

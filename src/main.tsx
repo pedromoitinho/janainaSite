@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, useLocation, Routes, Route } from 'react-router-dom'
+import { HashRouter, useLocation, Routes, Route } from 'react-router-dom'
 import App from './App.tsx'
 import Formulario from './formulario.tsx'
 import SobreNos from './SobreNos.tsx'
@@ -40,8 +40,8 @@ function AppWithLoading() {
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <AppWithLoading />
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>,
 )

@@ -2,6 +2,9 @@
   padding: 4rem 0;   
   
 }
+hr{
+  color:rgba(170, 170, 170, 0.185);
+}
 
 .container {
   max-width: 1200px;

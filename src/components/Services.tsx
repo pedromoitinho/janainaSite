@@ -29,7 +29,7 @@ const services: Service[] = [
     image: segurancaImg,
     link: "#",
     id: "imgProgramasDeSeguranca",
-    details: "Soluções em segurança do trabalho, com foco na gestão de documentos, treinamentos e integração com o e-Social. Conformidade com a legislação vigente e contribuição para a prevenção de acidentes, saúde e bem-estar dos colaboradores. <br/> Serviços: <br/> Elaboração de Documentos Legais: LTCAT, DIR, PGR, PPP",
+    details: "Soluções em segurança do trabalho, com foco na gestão de documentos, treinamentos e integração com o e-Social. Conformidade com a legislação vigente e contribuição para a prevenção de acidentes, saúde e bem-estar dos colaboradores. <br/> <hr/>Serviços: <br/> Elaboração de Documentos Legais: LTCAT, DIR, PGR, PPP",
     benefits: [
       "Conformidade com as normas regulamentadoras e integração com o e-Social",
       "Treinamentos para prevenção de riscos e capacitação de equipes",
@@ -43,7 +43,7 @@ const services: Service[] = [
     image: psicologiaImg,
     link: "#",
     id: "imgSegurancaDoTrabalho",
-    details: "Aplicação de avaliações psicossociais para promover o bem-estar mental dos colaboradores. Oferecemos mentoria para líderes e suporte na gestão de pessoas. <br/> Serviços: <br/> Avaliação Psicossocial, Avaliação Psicológica, Avaliação de Competência, Pesquisa de Clima Organizacional, Aplicação de Ferramentas de Gestão Comportamental",
+    details: "Aplicação de avaliações psicossociais para promover o bem-estar mental dos colaboradores. Oferecemos mentoria para líderes e suporte na gestão de pessoas. <br/> <hr/>Serviços: <br/> Avaliação Psicossocial, Avaliação Psicológica, Avaliação de Competência, Pesquisa de Clima Organizacional, Aplicação de Ferramentas de Gestão Comportamental",
     benefits: [
       "Redução de conflitos interpessoais",
       "Identificação e prevenção de riscos psicossociais",
@@ -57,7 +57,7 @@ const services: Service[] = [
     image: saudeImg,
     link: "#",
     id: "imgGestaoOcupacional",
-    details: "Programas de prevenção e acompanhamento médico, garantindo o bem-estar dos colaboradores e a conformidade com as exigências legais. <br/> Serviços: <br/> ASO - Atestado de Saúde Ocupacional",
+    details: "Programas de prevenção e acompanhamento médico, garantindo o bem-estar dos colaboradores e a conformidade com as exigências legais. <br/> <hr/>Serviços: <br/> ASO - Atestado de Saúde Ocupacional",
     benefits: [
       "Cumprimento de exigências legais (PCMSO, ASO, PCA e PPR)",
       "Redução de afastamentos e doenças ocupacionais",
@@ -71,7 +71,7 @@ const services: Service[] = [
     image: assesoriaImg,
     link: "#",
     id: "imgAssessoriaTecnica",
-    details: "Assessoria técnica para suporte na gestão, garantindo o correto atendimento às normas regulamentadoras e otimizando processos internos. <br/> Serviços: <br/> Gestão do E-Social: Eventos S-2210, S-2220, S-2240",
+    details: "Assessoria técnica para suporte na gestão, garantindo o correto atendimento às normas regulamentadoras e otimizando processos internos. <br/><hr/> Serviços: <br/> Gestão do E-Social: Eventos S-2210, S-2220, S-2240",
     benefits: [
       "Orientação técnica especializada",
       "Redução de não conformidades em fiscalizações",
@@ -85,7 +85,7 @@ const services: Service[] = [
     image: treinamentosImg,
     link: "#",
     id: "imgTreinamentosCorporativos",
-    details: "Treinamentos focados no desenvolvimento de soft skills e melhoria do clima organizacional. As capacitações são personalizadas de acordo com as demandas da empresa e direcionadas para líderes e equipes. <br/> Serviços: <br/> Mentoria para Lideres, Treinamentos Normativos NR 05 (CIPA), NR 10, NR 35 dentre outras normas regulamentadoras.",
+    details: "Treinamentos focados no desenvolvimento de soft skills e melhoria do clima organizacional. As capacitações são personalizadas de acordo com as demandas da empresa e direcionadas para líderes e equipes. <br/><hr/> Serviços: <br/> Mentoria para Lideres, Treinamentos Normativos NR 05 (CIPA), NR 10, NR 35 dentre outras normas regulamentadoras.",
     benefits: [
       "Desenvolvimento de habilidades socioemocionais",
       "Melhoria da comunicação interna e trabalho em equipe",
@@ -233,15 +233,7 @@ const Services: React.FC = () => {
                 <Link
                   to="/forms"
                   className="modal-button"
-                  onClick={(e) => {
-                    e.preventDefault(); // Prevent default Link behavior
-
-                    // 1. Close the modal and restore body styles
-                    closeModal();
-
-                    // 2. Force refresh to the forms page
-                    window.location.href = '/forms';
-                  }}
+                  onClick={() => closeModal()}
                 >
                   Solicitar Orçamento
                 </Link>

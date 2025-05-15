@@ -37,10 +37,9 @@ function Navbar() {
     return (
         <nav className="navBarDiv">
             <div className="navLogo">
-                <Link to="/" id='logoButton' onClick={(e) => {
-                    e.preventDefault();
-                    window.location.href = '/';
-                }}><img src={Logo} /></Link>
+                <Link to="/" id='logoButton'>
+                    <img src={Logo} />
+                </Link>
             </div>
             <button
                 className={`hamburger${menuState === 'open' ? ' open' : ''}`}
@@ -53,8 +52,8 @@ function Navbar() {
             </button>
             <div className={`navLinks ${menuState}`}>
                 <button className="nav-link-button" onClick={handleServicosClick}>Serviços</button>
-                <Link to="/about" onClick={() => { closeMenu(); window.location.href = '/about'; }}>Sobre Nós</Link>
-                <Link to="/forms" id='orcamento' onClick={() => { closeMenu(); window.location.href = '/forms'; }}>Orçamento</Link>
+                <Link to="/about" onClick={closeMenu}>Sobre Nós</Link>
+                <Link to="/forms" id='orcamento' onClick={closeMenu}>Orçamento</Link>
             </div>
         </nav>
     )
