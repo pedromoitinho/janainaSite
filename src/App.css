@@ -90,17 +90,17 @@ body, #root {
 }
 
 #heroImage {
-  opacity:0.25;
+  opacity:0.2;
   margin-top:10dvh;
   margin-right:1%;
-  max-width: 19%;
+  max-width: 16%;
   max-height: 100%;
   width: auto;
   height: auto;
   display: block;
   object-fit: contain;
   padding-bottom:3.5%;
-  filter:brightness(1.5);
+  filter:brightness(2);
   box-shadow: 1px solid black;
 }
 
