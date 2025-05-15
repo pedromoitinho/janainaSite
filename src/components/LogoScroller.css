@@ -1,24 +1,27 @@
-#scrollerTitle{
-    text-align:center;
-    margin-top:2rem;
-    margin-bottom:2rem;
-    font-size: 2.2rem;
-    font-weight: 700;
-    color: #1f2937;
+#scrollerTitle {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f2937;
 }
-#clientesAmarelo{
-    color:#f59e0b;
+
+#clientesAmarelo {
+  color: #f59e0b;
 }
+
 .logo-scroller {
   width: 60%;
-  margin-left:20%;  
+  margin-left: 20%;
   overflow: hidden;
   padding: 15px 0;
   position: relative;
-  background-color:#533d172a;
-  border-radius:100px;
-  margin-bottom:2rem;
-  --gap: 30px; /* Define gap as a variable for easy modification */  
+  background-color: #533d172a;
+  border-radius: 100px;
+  margin-bottom: 2rem;
+  --gap: 30px;
+  /* Define gap as a variable for easy modification */
 }
 
 .scroller-wrapper {
@@ -30,7 +33,8 @@
 
 .scroller-track {
   display: flex;
-  gap: var(--gap, 30px); /* Use CSS variable for gap */
+  gap: var(--gap, 30px);
+  /* Use CSS variable for gap */
   flex-shrink: 0;
   min-width: 100%;
   position: relative;
@@ -44,7 +48,8 @@
 .scroller-track:nth-child(2) {
   animation: scroll2 30s linear infinite;
   position: absolute;
-  left: 170%; /* Position exactly at the end of first track */
+  left: 140%;
+  /* Position exactly at the end of first track */
   top: 0;
 }
 
@@ -54,11 +59,12 @@
 }
 
 .logo-item {
-  flex: 0 0 auto; /* Don't grow or shrink */
+  flex: 0 0 auto;
+  /* Don't grow or shrink */
   margin: 0;
   padding: 0 10px;
   display: flex;
-  width: auto; 
+  width: auto;
   max-width: 144px;
   min-width: 130px;
   flex-direction: column;
@@ -68,8 +74,10 @@
 }
 
 .logo-item img {
-  height: 48px; /* Increased from 40px (+20%) */
-  max-width: 144px; /* Increased from 120px (+20%) */
+  height: 48px;
+  /* Increased from 40px (+20%) */
+  max-width: 144px;
+  /* Increased from 120px (+20%) */
   object-fit: contain;
   filter: grayscale(100%);
   opacity: 0.7;
@@ -77,15 +85,16 @@
 }
 
 /* Show logo name on hover - only on image hover */
-.logo-item img:hover + .logo-name {
+.logo-item img:hover+.logo-name {
   opacity: 1;
   visibility: visible;
 }
 
 .logo-name {
   position: absolute;
-  pointer-events:none;
-  left:20px; /* Center the tooltip */
+  pointer-events: none;
+  left: 20px;
+  /* Center the tooltip */
   transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -107,6 +116,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -116,6 +126,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-100%);
   }
@@ -123,64 +134,72 @@
 
 /* Responsive adjustments */
 @media (min-width: 769px) and (max-width: 1440px) {
-    .logo-scroller{
-        width:75%;
-        margin-left:12.5%;
-    }
-    .scroller-track:nth-child(2) {
-         left:250%;
-    }
-}
-@media (max-width: 768px) {
-    .logo-scroller {
-      margin-bottom: 0.5rem;
-      width: 100%;
-      margin-left: 0%;
-      border-radius: 0;
-      --gap: 20px; /* Smaller gap for mobile */
-    }
-    #scrollerTitle {
-      font-size: 1.7rem;
-    }
-    .logo-item {
-      margin: 0;
-      padding: 0 8px;
-      min-width: 100px;
-      max-width: 100px;
-    }
-    
-    .logo-item img {
-      height: 36px;
-      width: auto;
-      max-width: 90px;
-      object-fit: contain;
-    }
-    
+  .logo-scroller {
+    width: 75%;
+    margin-left: 12.5%;
+  }
 
-    .scroller-track {
-      gap: var(--gap, 20px); /* Adjusted gap for mobile */
-      animation-duration: 25s !important; /* Faster animation on mobile */
-    }
-    
-    .scroller-track:first-child {
-      animation: scroll 25s linear infinite;
-    }
-    
-    .scroller-track:nth-child(2) {
-      animation: scroll2 25s linear infinite;
-      left:350%;
-    }
-    .logo-item img.touched + .logo-name {
-        opacity: 1;
-        visibility: visible;
-    }
-    
-    .logo-item img.touched {
-      filter: grayscale(0%);
-      opacity: 1;
-    }
-    
-    .scroller-wrapper:has(.logo-item img.touched) .scroller-track {
-      animation-play-state: paused;
-    }
+  .scroller-track:nth-child(2) {
+    left: 250%;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo-scroller {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    margin-left: 0%;
+    border-radius: 0;
+    --gap: 20px;
+    /* Smaller gap for mobile */
+  }
+
+  #scrollerTitle {
+    font-size: 1.7rem;
+  }
+
+  .logo-item {
+    margin: 0;
+    padding: 0 8px;
+    min-width: 100px;
+    max-width: 100px;
+  }
+
+  .logo-item img {
+    height: 36px;
+    width: auto;
+    max-width: 90px;
+    object-fit: contain;
+  }
+
+
+  .scroller-track {
+    gap: var(--gap, 20px);
+    /* Adjusted gap for mobile */
+    animation-duration: 25s !important;
+    /* Faster animation on mobile */
+  }
+
+  .scroller-track:first-child {
+    animation: scroll 25s linear infinite;
+  }
+
+  .scroller-track:nth-child(2) {
+    animation: scroll2 25s linear infinite;
+    left: 350%;
+  }
+
+  .logo-item img.touched+.logo-name {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logo-item img.touched {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+
+  .scroller-wrapper:has(.logo-item img.touched) .scroller-track {
+    animation-play-state: paused;
+  }
 }

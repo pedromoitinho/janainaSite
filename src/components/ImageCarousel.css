@@ -1,0 +1,199 @@
+/* ImageCarousel.css */
+
+.carousel-container {
+    width: 50svw;
+    margin: 0rem auto;
+    padding: 20px 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.carousel-container.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#carouselTitle {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+#trabalhoAmarelo {
+    color: #f59e0b;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 400px;
+}
+
+.carousel-item {
+    flex: 0 0 100%;
+    position: relative;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: #583f1346;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.carousel-caption p {
+    color: white;
+    margin-bottom: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    width: 60%;
+    margin-left: 20%;
+
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s, background 0.3s;
+    z-index: 10;
+}
+
+.carousel-control svg {
+    width: 24px;
+    height: 24px;
+    color: #111;
+}
+
+.carousel-control.prev {
+    left: 15px;
+}
+
+.carousel-control.next {
+    right: 15px;
+}
+
+.carousel-control:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.carousel-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: #f59e0b;
+    transform: scale(1.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .carousel-caption p {
+        font-size: 0.85rem;
+        width: 100%;
+        margin-left: 0%;
+    }
+
+    .carousel-container {
+        width: 95%;
+        margin-left: 2.5%;
+        padding: 0;
+    }
+
+    #carouselTitle {
+        font-size: 1.7rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .carousel {
+        border-radius: 10px;
+        box-shadow: none;
+    }
+
+    .carousel-inner {
+        height: 300px;
+    }
+
+    .carousel-control {
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.7);
+    }
+
+    .carousel-control svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .carousel-caption {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+/* Animation for the items */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.carousel-caption {
+    animation: fadeIn 0.5s ease forwards;
+}

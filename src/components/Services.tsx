@@ -36,7 +36,6 @@ const services: Service[] = [
       'LTCAT - Laudo Técnico das Condições Ambientais do Trabalho',
       'PGR - Programa de Gerenciamento de Risco',
       'PPP - Perfil Profissiográfico Previdenciário',
-      'PCMSO - Programa de Controle Médico de Saúde Ocupacional',
       'AET - Análise Ergonômica do Trabalho',
       '<span style="font-weight:bold; position:relative; right:15px;">Treinamentos Obrigatórios</span>',
       'NR 05 - Prevenção de Acidentes e Assédio - CIPA',
@@ -54,10 +53,10 @@ const services: Service[] = [
 
     ],
     benefits: [
-      "Conformidade com as normas regulamentadoras",
-      "Treinamentos para prevenção de riscos e capacitação de equipes",
-      "Organização dos documentos de segurança do trabalho",
-      "Gestão da segurança do trabalho, melhorando a qualidade de vida no trabalho"
+      "Conformidade com as Normas Regulamentadoras",
+      "Treinamentos para Prevenção de Riscos e Capacitação de Equipes",
+      "Organização dos Documentos de Segurança do Trabalho",
+      "Gestão da Segurança do Trabalho, Melhorando a Qualidade de Vida no Trabalho"
     ]
   },
   {
@@ -69,16 +68,13 @@ const services: Service[] = [
     details: "Aplicação de avaliações psicossociais para promover o bem-estar mental dos colaboradores.<hr/>",
     services: [
       'Avaliação Psicossocial',
-      'Avaliação Psicológica',
-      'Avaliação de Competência',
-      'Pesquisa de Clima Organizacional',
-      'Aplicação de Ferramentas de Gestão Comportamental'
+      'Mentoria para Líderes',
+      'Pesquisas Organizacionais',
     ],
     benefits: [
-      "Redução de conflitos interpessoais",
-      "Identificação e prevenção de riscos psicossociais",
-      "Apoio psicológico estratégico para equipes e gestores",
-      "Redução de turnover e afastamentos por questões emocionais"
+      "Melhoria da Performance e do Clima Organizacional",
+      "Identificação e Prevenção de Riscos Psicossociais",
+      "Apoio à Conformidade Legal no GRO"
     ]
   },
   {
@@ -89,15 +85,15 @@ const services: Service[] = [
     id: "imgGestaoOcupacional",
     details: "Programas de prevenção e acompanhamento médico, garantindo o bem-estar dos colaboradores e a conformidade com as exigências legais.<hr/>",
     services: [
-      'ASO',
-      'ASO',
-      'PCA',
-      'PPR'
+      'PCMSO - Programa de Controle Médico de Saúde Ocupacional',
+      'ASO - Atestado de Saúde Ocupacional',
+      'PCA - Programa de Conservação Auditiva',
+      'PPR - Programa de Proteção Respiratória'
     ],
     benefits: [
-      "Redução de afastamentos e doenças ocupacionais",
-      "Acompanhamento preventivo da saúde dos colaboradores",
-      "Ambiente de trabalho mais seguro e saudável"
+      "Redução de Afastamentos e Doenças Ocupacionais",
+      "Acompanhamento Preventivo da Saúde dos Colaboradores",
+      "Ambiente de Trabalho Mais Seguro e Saudável"
     ]
   },
   {
@@ -108,16 +104,16 @@ const services: Service[] = [
     id: "imgAssessoriaTecnica",
     details: "Assessoria técnica para suporte na gestão, garantindo o correto atendimento às normas regulamentadoras e otimizando processos internos.<hr/>",
     services: [
-      'Gestão do E-Social',
-      'S-2210',
-      'S-2220',
-      'S-2240'
+      'Visitas de Profissionais Especializados',
+      'Inspeções Sobre Segurança no Trabalho',
+      'Suporte na Implementação de Programas como PGR, PCMSO, PCA e PPR',
+      'Treinamentos e Apoio em Fiscalizações'
     ],
     benefits: [
-      "Orientação técnica especializada",
-      "Redução de não conformidades em fiscalizações",
-      "Acompanhamento técnico presencial",
-      "Otimização de processos"
+      "Correção Imediata de Falhas",
+      "Redução de Não Conformidades em Fiscalizações",
+      "Acompanhamento Técnico Presencial",
+      "Otimização de Processos"
     ]
   },
   {
@@ -126,11 +122,19 @@ const services: Service[] = [
     image: treinamentosImg,
     link: "#",
     id: "imgTreinamentosCorporativos",
-    details: "Treinamentos focados no desenvolvimento de soft skills e melhoria do clima organizacional. As capacitações são personalizadas de acordo com as demandas da empresa e direcionadas para líderes e equipes. <br/><hr/> Serviços: <br/> Mentoria para Lideres, Treinamentos Normativos NR 05 (CIPA), NR 10, NR 35 dentre outras normas regulamentadoras.",
+    details: "Treinamentos focados no desenvolvimento de soft skills. As capacitações são personalizadas de acordo com as demandas da empresa e direcionadas para líderes e equipes.<hr/>",
+    services: [
+      '<span style="font-weight:bold; position:relative; right:15px;">Treinamentos em:</span>',
+      'Comunicação Assertiva',
+      'Inteligência Emocional',
+      'Trabalho em Equipe',
+      'Liderança e Tomada de Decisão',
+      'Gestão de Conflitos e Comportamento Seguro'
+    ],
     benefits: [
       "Desenvolvimento de habilidades socioemocionais",
       "Melhoria da comunicação interna e trabalho em equipe",
-      "Aumento da produtividade e engajamento dos colaboradores",
+      "Aumento da produtividade e engajamento dos colaboradores com as práticas de SST",
       "Redução de conflitos e melhoria do ambiente corporativo"
     ]
   },
