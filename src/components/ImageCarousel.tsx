@@ -55,8 +55,8 @@ const ImageCarousel: React.FC = () => {
         },
         {
             src: image6,
-            alt: 'Assessoria Técnica',
-            caption: ''
+            alt: 'Palestra',
+            caption: 'Palestra'
         },
         {
             src: image7,
