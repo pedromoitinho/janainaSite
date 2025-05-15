@@ -71,7 +71,7 @@ const LogoScroller: React.FC = () => {
 
   return (
     <>
-    <h1 id='scrollerTitle'>Algum de nossos <span id='clientesAmarelo'>clientes:</span></h1>
+    <h1 id='scrollerTitle'>Alguns de nossos <span id='clientesAmarelo'>clientes:</span></h1>
     <div className="logo-scroller" ref={scrollerRef}>
       <div className="scroller-wrapper">
         {/* First track */}
