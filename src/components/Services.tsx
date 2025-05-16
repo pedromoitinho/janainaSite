@@ -213,9 +213,10 @@ const Services: React.FC = () => {
               <div className="image-container">
                 <img
                   src={service.image || "/placeholder.svg"}
-                  alt={service.title}
+                  alt={`Serviço de ${service.title} - Vitais Consultoria`}
                   className="image"
                   id={service.id || createIdFromTitle(service.title)}
+                  loading="lazy"
                 />
               </div>
               <div className="content">
@@ -256,8 +257,9 @@ const Services: React.FC = () => {
             <div className="modal-image-container">
               <img
                 src={selectedService.image}
-                alt={selectedService.title}
+                alt={`Detalhes do serviço de ${selectedService.title} - Vitais Consultoria`}
                 className="modal-image"
+                loading="lazy"
               />
             </div>
             <div className="modal-body">

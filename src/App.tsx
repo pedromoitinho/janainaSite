@@ -43,9 +43,10 @@ function App() {
       <Navbar />
       <div className="app-content">
         <div className='heroDiv'>
-          <img src={janainaImg} id='heroImage' />
+          <img src={janainaImg} id='heroImage' alt="Vitais Consultoria - Especialistas em segurança do trabalho e saúde ocupacional" />
           <div className='heroText'>
             <h1>Sua visão, nossa estratégia</h1>
+            <h2 className='subtitle-seo'>Segurança do Trabalho e Psicologia Organizacional em Feira de Santana</h2>
           </div>
           <div className='heroButton'>
             <Link to="/forms" id='buttonOrcamento'>Começar agora</Link>

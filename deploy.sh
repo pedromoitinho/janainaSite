@@ -8,9 +8,15 @@ rm -rf dist
 echo "Building the project..."
 NODE_ENV=production pnpm run build
 
-# Copy 404.html for static site hosting
-echo "Copying 404.html to dist folder..."
+# Copy necessary files for static site hosting and SEO
+echo "Copying static files to dist folder..."
 cp public/404.html dist/
+cp public/robots.txt dist/
+cp public/sitemap.xml dist/
+
+# Update sitemap date
+current_date=$(date +"%Y-%m-%d")
+sed -i "s/<lastmod>.*<\/lastmod>/<lastmod>$current_date<\/lastmod>/g" dist/sitemap.xml
 
 # Copy .htaccess file if using Apache
 echo "Creating .htaccess file for Apache servers..."

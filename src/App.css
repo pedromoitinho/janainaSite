@@ -1,20 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-*{
+
+* {
   text-shadow: 1px 1px 2px rgba(206, 206, 206, 0.05);
   font-family: "Nunito Sans", sans-serif;
-  font-weight:600;
-  color:#1f2937;
+  font-weight: 600;
+  color: #1f2937;
 }
-body{
-  background-color:#fcfcfc;
+
+body {
+  background-color: #fcfcfc;
 }
-html, body, #root {
+
+html,
+body,
+#root {
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-body, #root {
+body,
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -22,27 +28,31 @@ body, #root {
 
 .app-content {
   flex: 1 0 auto;
-  padding-bottom: 8dvh; /* Add space for footer */
+  padding-bottom: 8dvh;
+  /* Add space for footer */
 }
+
 .heroDiv {
-  position: relative; /* Add this */
+  position: relative;
+  /* Add this */
   box-shadow:
-    0 -4px 10px -10px rgba(0,0,0,0.2),  /* Top shadow */
-    0 4px 10px 2px rgba(0,0,0,0.2);
-  margin-top:0px;
+    0 -4px 10px -10px rgba(0, 0, 0, 0.2),
+    /* Top shadow */
+    0 4px 10px 2px rgba(0, 0, 0, 0.2);
+  margin-top: 0px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 62dvh; 
+  height: 62dvh;
   overflow: hidden;
   background: linear-gradient(135deg, #f5a623 0%, #ffffff 100%);
 
 }
 
-@media (min-height: 1325px){
-  .heroDiv{
-    height:861.25px;
+@media (min-height: 1325px) {
+  .heroDiv {
+    height: 861.25px;
   }
 }
 
@@ -56,49 +66,53 @@ body, #root {
   z-index: 2;
   width: 100vw;
   height: 10dvh;
-  background-color: rgba(0,0,0,0.35);
+  background-color: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(2px);
-  font-size:1.35rem;
+  font-size: 1.35rem;
   display: flex;
-  justify-content: center;   /* horizontal center */
-  align-items: center;       /* vertical center */
+  justify-content: center;
+  /* horizontal center */
+  align-items: center;
+  /* vertical center */
 }
-.heroText h1{
-  color:white;
+
+.heroText h1 {
+  color: white;
 }
 
 .heroButton {
-  position:absolute;
-  top:80%;
+  position: absolute;
+  top: 80%;
 }
 
 #buttonOrcamento {
   background: #f3aa2b;
-  cursor:pointer;
+  cursor: pointer;
   color: #fef1dc;
   padding: 0.7em 3em;
   border-radius: 50px;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.3rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: all ease 0.3s;
-  &:hover{
-     filter:brightness(1.1);
-     font-size:1.45em;
+
+  &:hover {
+    filter: brightness(1.1);
+    font-size: 1.45em;
   }
 }
 
 #heroImage {
-  margin-top:10dvh;
+  margin-top: 10dvh;
   max-width: 100%;
   max-height: 100%;
   width: auto;
   height: auto;
   display: block;
   object-fit: contain;
-  padding-bottom:4.9%;
-  filter:brightness(1.1);
+  padding-bottom: 4.9%;
+  filter: brightness(1.1);
   box-shadow: 1px solid black;
 }
 
@@ -108,6 +122,7 @@ body, #root {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -120,6 +135,7 @@ body, #root {
     opacity: 0;
     transform: scale(0.8) translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -132,10 +148,12 @@ body, #root {
     opacity: 0;
     transform: scale(0.92) translateY(40px);
   }
+
   60% {
     opacity: 1;
     transform: scale(1.01) translateY(-5px);
   }
+
   100% {
     opacity: 1;
     transform: scale(1) translateY(0);
@@ -144,7 +162,7 @@ body, #root {
 
 .servicosText {
   width: 80dvw;
-  margin-left:10%;
+  margin-left: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -168,14 +186,16 @@ body, #root {
   gap: 3.0rem;
   justify-content: center;
   margin-top: 3rem;
-} 
-@media (max-width: 1575px){
-  .servicosCards{
-    gap:1.5rem;
+}
+
+@media (max-width: 1575px) {
+  .servicosCards {
+    gap: 1.5rem;
   }
-  .servicosText{
-    width:100dvw;
-    margin-left:0%;
+
+  .servicosText {
+    width: 100dvw;
+    margin-left: 0%;
   }
 }
 
@@ -183,19 +203,22 @@ body, #root {
   width: 200px;
   height: 300px;
   background: #fff;
-  border-radius: 30px; /* Use same radius for card, image, and overlay */
+  border-radius: 30px;
+  /* Use same radius for card, image, and overlay */
   display: flex;
-  border:2px solid #DBA02E;
+  border: 2px solid #DBA02E;
   align-items: center;
   justify-content: center;
-  box-shadow:2px 5px 30px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 2px 5px 30px 2px rgba(0, 0, 0, 0.25);
   position: relative;
   padding: 0;
-  overflow: hidden; /* Ensures image and overlay are clipped */
-  text-align:center;
+  overflow: hidden;
+  /* Ensures image and overlay are clipped */
+  text-align: center;
   transition: ease 0.3s;
-  &:hover{
-    transform:scale(1.1);
+
+  &:hover {
+    transform: scale(1.1);
   }
 }
 
@@ -205,31 +228,37 @@ body, #root {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit:cover;
-  border-radius: 30px; /* Match card */
+  object-fit: cover;
+  border-radius: 30px;
+  /* Match card */
   z-index: 1;
   pointer-events: none;
-  filter:brightness(1.15);
+  filter: brightness(1.15);
 }
-#imgAssessoria{
-  width:130%;
-  left:-7%;
+
+#imgAssessoria {
+  width: 130%;
+  left: -7%;
 }
-#imgPsicologia{
-  width:120%;
-  left:-13%;
+
+#imgPsicologia {
+  width: 120%;
+  left: -13%;
 }
-#imgSaude{
-  width:120%;
-  left:-7%;
+
+#imgSaude {
+  width: 120%;
+  left: -7%;
 }
-#imgSeguranca{
-  width:120%;
-  left:-8%;
+
+#imgSeguranca {
+  width: 120%;
+  left: -8%;
 }
-#imgTreinamentos{
-  width:120%;
-  left:-7%;
+
+#imgTreinamentos {
+  width: 120%;
+  left: -7%;
 }
 
 .servicoCardContent {
@@ -244,17 +273,19 @@ body, #root {
   align-items: center;
   justify-content: center;
   padding: 1.2rem;
-  background: rgba(0,0,0,0.05);
-  border-radius: 18px; /* Match card */
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 18px;
+  /* Match card */
 }
-#servicoAmarelo{
-  color:#f59e0b;
+
+#servicoAmarelo {
+  color: #f59e0b;
 }
 
 .servicoCardContent h2,
 .servicoCardContent p {
   color: #fff;
-  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
 }
 
 .servicoCardContent h2 {
@@ -284,29 +315,33 @@ body, #root {
   font-weight: bold;
   font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: background 0.2s;
   text-shadow: none;
   transition: ease 0.3s;
-  &:hover{
-    font-size:1.1rem;
+
+  &:hover {
+    font-size: 1.1rem;
   }
 }
 
 .servicoCardBtn:hover {
   background: #ffd942;
 }
-.solucoesDiv{
-  width:70dvw;
-  margin-top:2.5rem;
-  margin-left:15%;
-  display:flex;
-  flex-direction: column; /* Add this line */
-  align-items: center; /* Add this line */
+
+.solucoesDiv {
+  width: 70dvw;
+  margin-top: 2.5rem;
+  margin-left: 15%;
+  display: flex;
+  flex-direction: column;
+  /* Add this line */
+  align-items: center;
+  /* Add this line */
   user-select: none;
-  opacity: 0;  
+  opacity: 0;
   will-change: opacity, transform;
-  margin-bottom:5rem;
+  margin-bottom: 5rem;
 }
 
 
@@ -314,7 +349,7 @@ body, #root {
   animation: fadeInScale 2.5s cubic-bezier(0.23, 1, 0.32, 1) forwards;
 }
 
-#solucoesAmarelo{
+#solucoesAmarelo {
   color: #f59e0b;
 }
 
@@ -327,12 +362,14 @@ body, #root {
   max-width: 100%;
   padding: 0 2rem;
 }
-@media (max-width: 1750px){
-  .solucoesDiv{
-    width:100dvw;
-    margin-left:0%;
+
+@media (max-width: 1750px) {
+  .solucoesDiv {
+    width: 100dvw;
+    margin-left: 0%;
   }
-  .solucoesCards{
+
+  .solucoesCards {
     gap: 1.5rem;
   }
 }
@@ -341,16 +378,17 @@ body, #root {
   width: 500px;
   background: #fff;
   border-radius: 20px;
-  box-shadow: 2px 2px 20px rgba(0,0,0,0.1);
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
   display: flex;
   padding: 1.5rem;
-  padding-left:1rem;
+  padding-left: 1rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+
   &:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
 }
 
 
@@ -364,10 +402,12 @@ body, #root {
   justify-content: center;
   overflow: hidden;
   margin-right: 1rem;
-  color:#835a0f;
+  color: #835a0f;
 }
+
 .solucaoLogo svg {
-  stroke: #f59e0b; /* For outlined elements */
+  stroke: #f59e0b;
+  /* For outlined elements */
 }
 
 .solucaoContent {
@@ -390,118 +430,168 @@ body, #root {
 
 @media (max-width: 600px) {
 
-  .servicosTitle{
-    font-size:1.5rem;
+  .servicosTitle {
+    font-size: 1.5rem;
   }
-  .heroDiv{
-    height:50dvh;
+
+  .heroDiv {
+    height: 50dvh;
   }
-  .heroText{
-    font-size:0.75rem;
-    height:7dvh;
+
+  .heroText {
+    font-size: 0.75rem;
+    height: 7dvh;
   }
-  .heroButton{
-    top:78%;
+
+  .heroButton {
+    top: 78%;
   }
-  #heroImage{
-    padding-bottom:18%;
+
+  #heroImage {
+    padding-bottom: 18%;
   }
-  #buttonOrcamento{
-    font-size:0.85rem; /* Disable hover interaction */
+
+  #buttonOrcamento {
+    font-size: 0.85rem;
+
+    /* Disable hover interaction */
     &:hover {
-      font-size: 0.85rem; /* Remove hover brightness effect */
+      font-size: 0.85rem;
+      /* Remove hover brightness effect */
     }
   }
+
   .servicosText {
     margin-top: 4rem;
   }
+
   .servicosCards {
     gap: 1.2rem;
-    margin-top:1rem;
+    margin-top: 1rem;
   }
+
   .servicoCard {
     width: 90vw;
     max-width: 229px;
     height: 247px;
   }
+
   .solucoesCards {
     gap: 1.0rem;
     padding: 0 1rem;
   }
-  
+
   .solucaoCard {
     width: 100%;
     padding: 1rem;
   }
-  
+
   .solucaoLogo {
     width: 60px;
     height: 60px;
     min-width: 60px;
     margin-right: 1rem;
   }
-  
+
   .solucaoContent h3 {
     font-size: 1.0rem;
   }
-  
+
   .solucaoContent p {
     font-size: 0.9rem;
   }
-    .solucoesDiv{
-    margin-top:1.8rem;
+
+  .solucoesDiv {
+    margin-top: 1.8rem;
   }
-  .solucoesCards{
-    margin-top:5rem;
+
+  .solucoesCards {
+    margin-top: 5rem;
   }
 }
-@media (max-height:450px){
-    .servicoCardTitleBg{
-      font-size:0.95em;
-    }
-    .servicosTitle{
-    font-size:1.6rem;
+
+@media (max-height:450px) {
+  .servicoCardTitleBg {
+    font-size: 0.95em;
   }
-  .servicoCardBtn{
-    font-size:0.9rem;
-    margin-top:7.5%;
+
+  .servicosTitle {
+    font-size: 1.6rem;
   }
-  .servicoCard{
-    width:25.5dvw;
-    height:51dvh;
+
+  .servicoCardBtn {
+    font-size: 0.9rem;
+    margin-top: 7.5%;
   }
-  .servicosCards{
-    margin-top:2%;
+
+  .servicoCard {
+    width: 25.5dvw;
+    height: 51dvh;
   }
-  .servicosText{
-    width:70dvw;
-    margin-top:5%;
-    margin-left:15%;
+
+  .servicosCards {
+    margin-top: 2%;
   }
-  .heroDiv{
-    height:70dvh;
+
+  .servicosText {
+    width: 70dvw;
+    margin-top: 5%;
+    margin-left: 15%;
   }
-  .heroText{
-    font-size:0.9rem;
-    height:15dvh;
+
+  .heroDiv {
+    height: 70dvh;
   }
-  .heroButton{
-    top:82%;
+
+  .heroText {
+    font-size: 0.9rem;
+    height: 15dvh;
   }
-  .solucoesDiv{
-    margin-top:1.7rem;
+
+  .heroButton {
+    top: 82%;
   }
-  .solucoesCards{
-    margin-top:3.5rem;
+
+  .solucoesDiv {
+    margin-top: 1.7rem;
   }
-  #buttonOrcamento{
-    font-size:0.8rem;
+
+  .solucoesCards {
+    margin-top: 3.5rem;
   }
-    .solucaoContent h3 {
+
+  #buttonOrcamento {
+    font-size: 0.8rem;
+  }
+
+  .solucaoContent h3 {
     font-size: 1.0rem;
   }
-  
+
   .solucaoContent p {
     font-size: 0.9rem;
   }
+}
+
+.subtitle-seo {
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #4b5563;
+  margin-top: 10px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .subtitle-seo {
+    font-size: 1rem;
+    margin-top: 8px;
+  }
+}
+
+/* Hide the SEO subtitle visually but keep it for screen readers and search engines */
+.subtitle-seo {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
 }
