@@ -40,7 +40,7 @@ const services: Service[] = [
       '<span style="font-weight:bold; position:relative; right:15px;">Treinamentos Obrigatórios</span>',
       'NR 05 - Prevenção de Acidentes e Assédio - CIPA',
       'NR 06 - Uso de EPIs',
-      'NR 10 - Segurança em Instalações',
+      'NR 10 - Segurança em Instalações e Serviços em Eletricidade',
       'NR 12 - Segurança em Maquinas e Equipamentos',
       'NR 17 - Ergonomia',
       'NR 18 - Segurança na Indústria da Construção',
