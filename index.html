@@ -1,147 +1,263 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Vitais Consultoria | Segurança do Trabalho e Psicologia Organizacional
+    </title>
+    <link
+      rel="icon"
+      type="image/png"
+      id="siteLogo"
+      href="./src/assets/seta_transparent_rotated.png"
+    />
+    <link rel="canonical" href="https://www.vitaisconsultoria.com" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vitais Consultoria | Segurança do Trabalho e Psicologia Organizacional</title>
-  <link rel="icon" type="image/png" id='siteLogo' href="./src/assets/seta_transparent_rotated.png">
-  <link rel="canonical" href="https://www.vitaisconsultoria.com" />
+    <meta
+      name="description"
+      content="Vitais Consultoria - Especialistas em segurança do trabalho, saúde ocupacional e psicologia organizacional em Feira de Santana. Desenvolvimento de programas e treinamentos para gestão de riscos e prevenção de acidentes."
+    />
+    <meta
+      name="keywords"
+      content="Vitais, Segurança, Segurança do Trabalho Feira de Santana, PGR, PCMSO, Treinamento NR, Psicologia Organizacional, Saúde Ocupacional, Avaliação Psicossocial, LTCAT, PPP, Consultoria SST, Consultoria eSocial, Treinamentos NR05, NR06, NR10, NR12, NR17, NR18, NR33, NR35"
+    />
+    <meta name="author" content="Vitais Consultoria" />
+    <meta name="robots" content="index, follow" />
+    <meta name="geo.region" content="BR-BA" />
+    <meta name="geo.placename" content="Feira de Santana" />
 
-  <meta name="description"
-    content="Vitais Consultoria - Especialistas em segurança do trabalho, saúde ocupacional e psicologia organizacional em Feira de Santana. Desenvolvimento de programas e treinamentos para gestão de riscos e prevenção de acidentes." />
-  <meta name="keywords"
-    content="Vitais, Segurança, Segurança do Trabalho Feira de Santana, PGR, PCMSO, Treinamento NR, Psicologia Organizacional, Saúde Ocupacional, Avaliação Psicossocial, LTCAT, PPP, Consultoria SST, Consultoria eSocial, Treinamentos NR05, NR06, NR10, NR12, NR17, NR18, NR33, NR35" />
-  <meta name="author" content="Vitais Consultoria" />
-  <meta name="robots" content="index, follow" />
-  <meta name="geo.region" content="BR-BA" />
-  <meta name="geo.placename" content="Feira de Santana" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Vitais Consultoria" />
+    <meta
+      property="og:title"
+      content="Vitais Consultoria | Consultoria para Empresas"
+    />
+    <meta
+      property="og:description"
+      content="Serviços especializados em segurança do trabalho, saúde ocupacional e psicologia organizacional. LTCAT, PGR, PPP, PCMSO, treinamentos NR e soluções completas para SST."
+    />
+    <meta
+      property="og:image"
+      content="https://www.vitaisconsultoria.com/assets/meta.png"
+    />
+    <meta
+      property="og:image:alt"
+      content="Vitais Consultoria - Segurança do Trabalho"
+    />
+    <meta property="og:url" content="https://www.vitaisconsultoria.com" />
+    <meta property="og:locale" content="pt_BR" />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Vitais Consultoria" />
-  <meta property="og:title" content="Vitais Consultoria | Consultoria para Empresas" />
-  <meta property="og:description"
-    content="Serviços especializados em segurança do trabalho, saúde ocupacional e psicologia organizacional. LTCAT, PGR, PPP, PCMSO, treinamentos NR e soluções completas para SST." />
-  <meta property="og:image" content="https://www.vitaisconsultoria.com/assets/meta.png" />
-  <meta property="og:image:alt" content="Vitais Consultoria - Segurança do Trabalho" />
-  <meta property="og:url" content="https://www.vitaisconsultoria.com" />
-  <meta property="og:locale" content="pt_BR" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Vitais Consultoria | Segurança do Trabalho e Saúde Ocupacional"
+    />
+    <meta
+      name="twitter:description"
+      content="Serviços especializados em segurança do trabalho, saúde ocupacional e psicologia organizacional. LTCAT, PGR, PPP, PCMSO, treinamentos NR e soluções completas para SST."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.vitaisconsultoria.com/assets/meta.png"
+    />
+    <meta
+      name="twitter:image:alt"
+      content="Vitais Consultoria - Segurança do Trabalho"
+    />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vitais Consultoria | Segurança do Trabalho e Saúde Ocupacional" />
-  <meta name="twitter:description"
-    content="Serviços especializados em segurança do trabalho, saúde ocupacional e psicologia organizacional. LTCAT, PGR, PPP, PCMSO, treinamentos NR e soluções completas para SST." />
-  <meta name="twitter:image" content="https://www.vitaisconsultoria.com/assets/meta.png" />
-  <meta name="twitter:image:alt" content="Vitais Consultoria - Segurança do Trabalho" />
-
-  <!-- Structured Data / JSON-LD -->
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Vitais Consultoria",
-      "description": "Serviços especializados em segurança do trabalho, saúde ocupacional e psicologia organizacional.",
-      "image": "https://www.vitaisconsultoria.com/assets/meta.png",
-      "url": "https://www.vitaisconsultoria.com",
-      "telephone": "(75) 9974-6777",
-      "email": "comercial@vitaisconsultoria.com",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "R JURACY MAGALHAES JUNIOR, Nº91",
-        "addressLocality": "Feira de Santana",
-        "addressRegion": "BA",
-        "postalCode": "",
-        "addressCountry": "BR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "-12.2567",
-        "longitude": "-38.9587"
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday"
-        ],
-        "opens": "08:00",
-        "closes": "18:00"
-      },
-      "sameAs": [
-        "https://www.instagram.com/vitais_consultoria",
-        "https://www.facebook.com/share/18Yz6FTxrU/",
-        "https://www.linkedin.com/in/vitais-consultoria-b975a2365/"
-      ],
-      "priceRange": "$$"
-    }
-  </script>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Consultoria em Segurança do Trabalho",
-      "provider": {
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
         "@type": "LocalBusiness",
         "name": "Vitais Consultoria",
-        "url": "https://www.vitaisconsultoria.com"
-      },
-      "areaServed": {
-        "@type": "State",
-        "name": "Bahia"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Serviços de Segurança do Trabalho",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "LTCAT - Laudo Técnico das Condições Ambientais do Trabalho"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "PGR - Programa de Gerenciamento de Risco"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "PPP - Perfil Profissiográfico Previdenciário"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Treinamentos NR05, NR06, NR10, NR12, NR17, NR18, NR33, NR35"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Psicologia Organizacional"
-            }
-          }
-        ]
+        "description": "Serviços especializados em segurança do trabalho, saúde ocupacional e psicologia organizacional.",
+        "image": "https://www.vitaisconsultoria.com/assets/meta.png",
+        "url": "https://www.vitaisconsultoria.com",
+        "telephone": "(75) 9974-6777",
+        "email": "comercial@vitaisconsultoria.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "R JURACY MAGALHAES JUNIOR, Nº91",
+          "addressLocality": "Feira de Santana",
+          "addressRegion": "BA",
+          "postalCode": "",
+          "addressCountry": "BR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "-12.2567",
+          "longitude": "-38.9587"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        },
+        "sameAs": [
+          "https://www.instagram.com/vitais_consultoria",
+          "https://www.facebook.com/share/18Yz6FTxrU/",
+          "https://www.linkedin.com/in/vitais-consultoria-b975a2365/"
+        ],
+        "priceRange": "$$"
       }
-    }
-  </script>
-</head>
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Consultoria em Segurança do Trabalho",
+        "provider": {
+          "@type": "LocalBusiness",
+          "name": "Vitais Consultoria",
+          "url": "https://www.vitaisconsultoria.com"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Bahia"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Serviços de Segurança do Trabalho",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "LTCAT - Laudo Técnico das Condições Ambientais do Trabalho"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "PGR - Programa de Gerenciamento de Risco"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "PPP - Perfil Profissiográfico Previdenciário"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Treinamentos NR05, NR06, NR10, NR12, NR17, NR18, NR33, NR35"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Psicologia Organizacional"
+              }
+            }
+          ]
+        }
+      }
+    </script>
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/janaina.png"
+      type="image/png"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/assessoria.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/Galera.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/janaina.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/logoJanaina.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/meta.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/psicologia.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/saude.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/segurança.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/seta.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/seta_transparent_rotated.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="image"
+      href="./src/assets/treinamentos.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="style"
+      href="/src/main.css"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="/src/main.css" /></noscript>
+  </head>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx" defer></script>
+  </body>
 </html>
